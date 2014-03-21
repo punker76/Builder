@@ -1,0 +1,128 @@
+﻿//Lanaguages
+
+English - United States#English - United States
+Spanish - Traditional#Spanish - Traditional
+Portuguese - Brazil#Portuguese - Brazil
+
+//General
+
+Attention#Attention
+Information#Information
+Error#Error
+Cancel#Cancel
+Close#&Close
+Name#Name
+Shared#Shared
+Filename#Filename
+Content#Content
+Dependencies#Dependencies
+Publish#Publish
+Install#Installl
+Options#Options
+Host Applications#Host Applications
+Min. Version#Min. Version
+Allowed Distributions#Allowed Distributions
+Destiny#Destiny
+Browse#Browse...
+File#&File
+Add#Add
+Edit#Edit
+Remove#Remove
+Save#Save
+Description#Description
+Message#Message
+Version#Version
+Product Id#Product Id
+Versions#Versions
+Status#Status
+MoveUp#Move Up
+MoveDown#Move Down
+New Version#Release Version
+Development#Development
+Released#Released
+Products#Products
+Custom#Custom
+Create#&Create
+None#None
+Operation Successful#The operation has finished successfully.
+Operation Failed#An error has occurred and the operation was interrupted.\r\n\r\nMessage:\r\n{0}
+Tools#Tools
+
+//Exceptions
+
+ArgumentException#Value does not fall within the expected range:\r\n{0}.
+
+//MainForm
+
+MainForm.Mbox_Caption.AtLeastOneVersion#You must select at least one version below.
+MainForm.Mbox_Caption.BetaCreationSuccessful#The operation has finished successfully.
+Create Selected Versions Betas#Create Selected Versions Betas
+Create Selected Test Betas#Create Selected Test Betas
+Create Custom Beta#Create Custom Beta
+
+//Options/General
+
+GeneralOptions#General
+Language#Language:
+Products Manager Executable Path#Products Manager Executable Path:
+
+//Options/Publish
+
+Executable Path#Executable Path:
+Install Path#Install Path:
+Local Media Path#Local Media Path:
+Email#Email:
+
+//PublishForm
+
+Save Local Media Copy#Save Local Media Copy
+PublishForm.Mbox_Caption.OperationSuccessful#The operation has finished successfully.
+PublishForm.Mbox_Caption.OperationFinishedWithErrors#The operation has finished with errors.
+PublishForm.Mbox_Caption.SaveLocalMediaPathToOptions#Would you like to save the selected folder as your default Local Media Path?
+PublishForm.Mbox_Caption.CloseMessage#Cancelling will suspend all pending publications.\r\nWould you like to proceed?
+Create Patch#Create Patch
+CurrentAlwaysCreateRelease#Releases from the Current version always create a patch.
+InvalidReleaseVersion#The release version must be in the following format: X.Y.Z,\r\nwhere X=Major Version, Y=Minor Version and Z=Build Number,\r\nand must greater then the current released version.
+
+//PublishingManager
+
+PublishingManager.Mbox_Caption.CancelAll#Would you like to cancel all pending publications?
+
+//PluginDataEditorForm
+
+Plugin Data Editor#Plugin.data Editor
+PluginDataEditorForm.Mbox_Caption.LocalFolderNotFound#Local folder was not found!\r\nWould you like to open the Products Manager so you can download this version?
+PluginDataEditorForm.Mbox_Caption.ProductsManagerExecutableInvalid#Could not open the Products Manager.\r\nThe General\\Products Manager Executable Path option is invalid.
+PluginDataEditorForm.Mbox_Caption.RemoveSelectedHostApplications#Would you like to remove the selected host application(s)?
+PluginDataEditorForm.Mbox_Caption.RemoveSelectedDependencies#Would you like to remove the selected dependency(ies)?
+PluginDataEditorForm.Mbox_Caption.RemoveSelectedContents#Would you like to remove the selected content(s)?
+
+Add dependency#Add dependency
+Add content#Add content
+Remove selected dependency#Remove selected dependency
+Remove selected content#Remove selected content
+
+//BetaDataEditorForm
+
+Beta Data Editor#Beta.data Editor
+Dependency Products#Dependency Products
+Selected products#Selected products:
+Select products below#Select products below:
+BetaDataEditorForm.Mbox_Caption.HasChanges#Would you like to save your changes?
+BetaDataEditorForm.Mbox_Caption.MustHaveAtLeastOneProductSelected#You must selected at least one product to create the beta.
+New BetaData File#&New BetaData File
+Open BetaData File#&Open BetaData File...
+Save BetaData File As#Save BetaData File &As...
+Save BetaData File#&Save BetaData File
+Failed to create beta#Failed to create beta.
+Failed to download the release#Failed to download the release.
+Failed to move temporary files#Failed to move temporary files.\r\nDetails: {0}\r\n{1}
+Beta Creator#Beta Creator
+
+//AddDependencyForm
+
+AddDependencyForm.Mbox_Caption.CheckUncheck#Would you like to check/uncheck all the children nodes?
+
+//AddContentForm
+
+AddContentForm.Mbox_Caption.CheckUncheck#Would you like to check/uncheck all the children nodes?

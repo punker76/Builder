@@ -1,0 +1,7 @@
+<PublishOptions>
+  <ExecutablePath>C:\Program Files\Procad\Promob Catalog\Program\Publisher\Publisher.exe</ExecutablePath>
+  <InstallPath>\\FILESERVERCXJ\UD-Projetos\Produtos\Plugins\Install</InstallPath>
+  <LocalMediaPath>C:\Publicacao29082012</LocalMediaPath>
+  <BetasPath>C:\Betas</BetasPath>
+  <Email>wagner@promob.com</Email>
+</PublishOptions>
