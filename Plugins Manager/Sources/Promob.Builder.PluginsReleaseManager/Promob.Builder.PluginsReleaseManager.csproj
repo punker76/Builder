@@ -56,18 +56,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Promob.Builder.Forms, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <HintPath>..\..\References\Local\Promob.Builder.Forms.dll</HintPath>
-    </Reference>
-    <Reference Include="Promob.Builder.Options, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <HintPath>..\..\References\Local\Promob.Builder.Options.dll</HintPath>
-    </Reference>
-    <Reference Include="Promob.Builder.PluginsManagement, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <HintPath>..\..\References\Local\Promob.Builder.PluginsManagement.dll</HintPath>
-    </Reference>
-    <Reference Include="Promob.Builder.Translation, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <HintPath>..\..\References\Local\Promob.Builder.Translation.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -110,6 +98,24 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="builder.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Promob.Builder.Forms\Promob.Builder.Forms.csproj">
+      <Project>{090e7d16-fadf-447c-8d55-71a3207c9c85}</Project>
+      <Name>Promob.Builder.Forms</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Promob.Builder.Options\Promob.Builder.Options.csproj">
+      <Project>{3171521f-5d83-466d-a899-31c8a31c1fed}</Project>
+      <Name>Promob.Builder.Options</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Promob.Builder.PluginsManagement\Promob.Builder.PluginsManagement.csproj">
+      <Project>{5f9ba23b-d4a0-4b62-a979-caf33d943fc7}</Project>
+      <Name>Promob.Builder.PluginsManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Promob.Builder.Translation\Promob.Builder.Translation.csproj">
+      <Project>{c15bed0b-7843-49fd-8732-06711567ec8a}</Project>
+      <Name>Promob.Builder.Translation</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

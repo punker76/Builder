@@ -51,9 +51,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Promob.Builder.SVN, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <HintPath>..\..\References\Local\Promob.Builder.SVN.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -69,6 +66,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Version.cs" />
     <Compile Include="VersionCollection.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Promob.Builder.SVN\Promob.Builder.SVN.csproj">
+      <Project>{c31b52f3-b54c-4ff7-a30c-a6e633b8137d}</Project>
+      <Name>Promob.Builder.SVN</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

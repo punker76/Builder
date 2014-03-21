@@ -50,9 +50,6 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Promob.Builder.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
-      <HintPath>..\..\References\Local\Promob.Builder.Core.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -90,6 +87,12 @@
     <EmbeddedResource Include="FilenameTextBox.resx">
       <DependentUpon>FilenameTextBox.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Promob.Builder.Core\Promob.Builder.Core.csproj">
+      <Project>{3f4a62c9-5ec1-4e80-840b-6955631b5c44}</Project>
+      <Name>Promob.Builder.Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
