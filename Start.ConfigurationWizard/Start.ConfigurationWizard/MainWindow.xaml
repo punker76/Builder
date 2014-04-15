@@ -1,0 +1,46 @@
+﻿<Window x:Class="Start.ConfigurationWizard.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainWindow" Height="693" Width="920.3" Background="LightGray" >
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="TabControlResources.xaml"/>
+                <ResourceDictionary Source="LeftTabControlResources.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Name="miFile"  Header="_File"/>
+            <MenuItem Name="miShow" Header="_Show"/>
+            <MenuItem Name="miTools" Header="_Tools"/>
+        </Menu>
+        <TabControl Style="{StaticResource TabControlStyle}" Name="tcMain" Margin ="10" Grid.Row="1" MouseDown="tcMain_MouseDown">
+            <TabItem Style="{StaticResource TabItemStyle}" Header="Página inicial" MouseDown="TabItem_MouseDown">
+                <Grid>
+                    <TabControl  Style="{StaticResource LeftTabControlStyle}" TabStripPlacement="Left">
+                        <TabItem Style="{StaticResource LeftTabItemStyle}" Header="Dados do sistema"></TabItem>
+                        <TabItem Style="{StaticResource LeftTabItemStyle}" Header="Matéria prima"></TabItem>
+                        <TabItem Style="{StaticResource LeftTabItemStyle}" Header="Portas de alumínio"></TabItem>
+                        <TabItem Style="{StaticResource LeftTabItemStyle}" Header="Painéis"></TabItem>
+                        <TabItem Style="{StaticResource LeftTabItemStyle}" Header="Preços"></TabItem>
+                    </TabControl>
+                </Grid>
+            </TabItem>
+            <TabItem Style="{StaticResource TabItemStyle}" Header="Página inicial" MouseDown="TabItem_MouseDown"/>
+            <TabItem Style="{StaticResource TabItemStyle}" Header="Página inicial" MouseDown="TabItem_MouseDown"/>
+            <TabItem Style="{StaticResource TabItemStyle}" Header="Página inicial" MouseDown="TabItem_MouseDown"/>
+        </TabControl>
+        <StatusBar Grid.Row="2">
+            <StatusBarItem Content="Log">
+            </StatusBarItem>
+        </StatusBar>
+    </Grid>
+
+</Window>

@@ -1,0 +1,152 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Color x:Key="TabControl_BackgroundColor_Base">#EEF7FF</Color>
+    <Color x:Key="BorderColor_Base">#888</Color>
+    
+
+    <SolidColorBrush x:Key="TabItem_BorderBrush_Selected" Color="{StaticResource BorderColor_Base}" />
+    <SolidColorBrush x:Key="TabControl_BackgroundBrush_Base" Color="{StaticResource TabControl_BackgroundColor_Base}"/>
+    <SolidColorBrush x:Key="TabItem_TextBrush_Unselected" Color="#4971A3" />
+    <SolidColorBrush x:Key="TabItem_TextBrush_Disabled" Color="#888" />
+    <SolidColorBrush x:Key="TabItem_TextBrush_Hover" Color="Indigo" />
+    <SolidColorBrush x:Key="TabItem_TextBrush_Selected" Color="DarkBlue" />
+    
+    <LinearGradientBrush x:Key="TabItem_BackGroundColorMouseOver" EndPoint="0,0" StartPoint="0,1">
+        <GradientStop Color="#FFFFD5A0" Offset="0.3" />
+        <GradientStop Color="#FFFFA335" Offset="0.51" />
+        <GradientStop Color="#FFFFC14A" Offset="0.98" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="TabItem_HoverBorderBrush" StartPoint="0,0" 
+                           EndPoint="0,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="0.98" Color="DarkOrange"/>
+            <GradientStop Offset="0.99" 
+                          Color="{StaticResource BorderColor_Base}"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="TabItem_BackGroundColorSelected" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Color="Orange" Offset="0.1"/>
+        <GradientStop Color="#DFE9F6" Offset="0.1"/>
+        <GradientStop Color="{StaticResource TabControl_BackgroundColor_Base}" Offset="0.7"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="TabItemPanel_BackgroundBrush" 
+                           StartPoint="0,0" EndPoint="0,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Offset="0.98" Color="Transparent"/>
+            <GradientStop Offset="0.99" 
+               Color="{StaticResource BorderColor_Base}"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="TabItem_HoverBackgroundBrush" 
+                           EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="#FFFFD5A0" Offset="0.3" />
+        <GradientStop Color="#FFFFA335" Offset="0.51" />
+        <GradientStop Color="#FFFFC14A" Offset="0.98" />
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="TabItem_BackgroundBrush_Unselected" StartPoint="0,0" EndPoint="0,1">
+        <LinearGradientBrush.GradientStops>
+            <GradientStop Color="#E8F2FF" Offset="0.0"/>
+            <GradientStop Color="#DFE9F6" Offset="0.3"/>
+            <GradientStop Color="#C7D8EE" Offset="0.7"/>
+            <GradientStop Color="#B9CADE" Offset="0.98"/>
+            <GradientStop Color="{StaticResource BorderColor_Base}" Offset="0.99"/>
+        </LinearGradientBrush.GradientStops>
+    </LinearGradientBrush>
+
+    <Thickness x:Key="TabItemMargin_Base">0,8,-4,0</Thickness>
+    <Thickness x:Key="TabItemMargin_Selected">-4,0,-4,0</Thickness>
+    <Thickness x:Key="TabItemMargin_Hover">0,4,-4,0</Thickness>
+    <Thickness x:Key="TabItemPanel_Padding">4,0,0,0</Thickness>
+
+    <Style x:Key="TabControlStyle" TargetType="TabControl">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TabControl">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Border
+                            Padding="{StaticResource TabItemPanel_Padding}"
+                            Background="{StaticResource TabItemPanel_BackgroundBrush}">
+                            <TabPanel IsItemsHost="True"/>
+                        </Border>
+
+                        <Border 
+                            BorderThickness="1,0,1,1"
+                            Grid.Row="1"
+                            BorderBrush="{StaticResource TabItem_BorderBrush_Selected}" 
+                            Background="{StaticResource TabControl_BackgroundBrush_Base}">
+                            <ContentPresenter ContentSource="SelectedContent" Margin="10"/>
+                        </Border>
+
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style x:Key="TabItemStyle" TargetType="TabItem">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="TabItem">
+                    <Grid Height="35" VerticalAlignment="Bottom">
+                        <Border Name="Border"
+                                Background="{StaticResource TabItem_BackgroundBrush_Unselected}"
+                                BorderBrush="{StaticResource TabItem_BorderBrush_Selected}"
+                                CornerRadius="3,3,0,0"
+                                BorderThickness="1,1,1,0"
+                                Margin="{StaticResource TabItemMargin_Selected}">
+                            <ContentPresenter 
+                                        x:Name="ContentSite"
+                                        VerticalAlignment="Center"
+                                        HorizontalAlignment="Center"
+                                        ContentSource="Header"
+                                        Margin="7,2,12,2"
+                                        RecognizesAccessKey ="True"/>
+                        </Border>
+                    </Grid>
+
+                   
+                    
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Panel.ZIndex" Value="100" />
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource TabItem_BackGroundColorSelected}"/>
+                        </Trigger>
+
+                        <Trigger Property="IsSelected" Value="False">
+                            <Setter Property="Panel.ZIndex" Value="98"/>
+                            <Setter TargetName="Border" Property="Margin" Value="{StaticResource TabItemMargin_Base}"/>
+                            <Setter TargetName="Border" Property="Background" Value="{StaticResource TabItem_BackgroundBrush_Unselected}"/>
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="Border.IsMouseOver" Value="True"/>
+                                <Condition Property="IsSelected" Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Panel.ZIndex" Value="99" />
+                            <Setter Property="BorderBrush" TargetName="Border" Value="{StaticResource TabItem_HoverBorderBrush}" />
+                            <Setter TargetName="Border" Property="BorderThickness" Value="2,1,1,1" />
+                            <Setter Property="Background" TargetName="Border"
+                                Value="{StaticResource TabItem_HoverBackgroundBrush}"/>
+                            <Setter TargetName="Border" Property="Margin" 
+                                Value="{StaticResource TabItemMargin_Hover}"/>
+                        </MultiTrigger>                      
+                        
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
